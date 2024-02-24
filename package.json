@@ -1,0 +1,29 @@
+{
+  "name": "something",
+  "version": "1.0.0",
+  "description": "description of something",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf ./build",
+    "dev": "npx nodemon",
+    "build": "npm run prebuild && npx tsc",
+    "start": "npm run build && node build/main",
+    "lint": "npx eslint ./src",
+    "format": "npx eslint ./src --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "grammy": "^1.20.3"
+  }
+}

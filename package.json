@@ -1,0 +1,21 @@
+{
+    "name": "config-ts",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "prebuild": "rimraf ./build",
+        "build": "npx tsc",
+        "dev": "NODE_ENV=development node --env-file=.env.development --watch -r ts-node/register src/main.ts",
+        "start": "pnpm build && NODE_ENV=production node --env-file=.env.production build/main.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^22.10.1",
+        "rimraf": "^6.0.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.7.2"
+    }
+}

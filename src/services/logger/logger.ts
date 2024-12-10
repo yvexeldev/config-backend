@@ -139,7 +139,6 @@ export class Logger implements LogTransport {
 
         // File logging if enabled
         if (this.logToFile) {
-            console.log({ level });
             const logType =
                 level === LogLevel.ERROR || level === LogLevel.FATAL
                     ? 'error'
